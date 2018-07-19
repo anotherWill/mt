@@ -1,0 +1,39 @@
+{
+  "name": "d3",
+  "version": "1.0.0",
+  "description": "a d3.js project",
+  "main": "xxx.js",
+  "scripts": {
+    "start": "rm -rf dist/* && webpack-dev-server --mode development",
+    "build:dev": "rm -rf dist/* && webpack --mode development",
+    "build:prod": "rm -rf dist/* && webpack-dashboard -- webpack --mode production"
+  },
+  "author": "jwj",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^8.6.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "extract-loader": "^2.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^4.1.0",
+    "precss": "^3.1.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dashboard": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "postcss-loader": "^2.1.5",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
