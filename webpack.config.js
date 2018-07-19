@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const entries = require('./config/webpack-entry')
 const htmlPlugins = require('./config/webpack-template')()
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const config = {
   entry: entries,
@@ -46,7 +46,7 @@ const config = {
             partialDirs: [
               path.join(__dirname, 'src', 'template/partial'),
             ],
-            // inlineRequires: '\/assets/images\/'
+            inlineRequires: '\/src/lib\/'
           }
         }, {
           loader: 'extract-loader'
@@ -56,12 +56,20 @@ const config = {
       },
     ]
   },
+  resolve: {
+    alias: {
+    },
+  },
   plugins: [
     new webpack.ProvidePlugin({
       jQuery: 'jquery',
       $: 'jquery'
     }),
     new ExtractTextPlugin('css/[name].css'),
+    new CopyWebpackPlugin([{
+      from: path.resolve(__dirname, "./src/lib"),
+      to: 'lib',
+    }]),
   ],
 }
 
