@@ -3,6 +3,7 @@ const glob = require('glob')
 const path = require('path')
 const jsPath = path.resolve('src', 'template')
 const templatePaths = glob.sync(jsPath + '/*.hbs')
+const config = require('./config.js')
 
 module.exports = function () {
 
@@ -16,7 +17,7 @@ module.exports = function () {
 				filename: `${templateName}.html`,
 				chunks: [templateName],
 				hash: true,
-				inject: true
+				inject: true,
 			})
 		);
   }

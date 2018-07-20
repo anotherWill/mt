@@ -46,7 +46,7 @@ const config = {
             partialDirs: [
               path.join(__dirname, 'src', 'template/partial'),
             ],
-            inlineRequires: '\/src/lib\/'
+            // inlineRequires: '\/src/lib\/'
           }
         }, {
           loader: 'extract-loader'
