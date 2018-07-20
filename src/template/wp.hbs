@@ -2,7 +2,52 @@
 
 <div class="reveal">
   <div class="slides">
-    <section>
+
+    {{> ./webpackPage/1.hbs }}
+    {{> ./webpackPage/2.hbs }}
+    {{> ./webpackPage/3.hbs }}
+    {{> ./webpackPage/4.hbs }}
+    {{> ./webpackPage/5.hbs }}
+    {{> ./webpackPage/6.hbs }}
+    {{> ./webpackPage/7.hbs }}
+    {{> ./webpackPage/8.hbs }}
+
+    {{!--<section>
+      <section data-markdown data-separator="---">
+          <script type="text/template">
+              ## Demo 1
+              Slide 1
+              ---
+              ## Demo 1
+              Slide 2
+              ---
+              ## Demo 1
+              Slide 3
+          </script>
+      </section>
+
+      <section data-markdown class='ta-l'>
+        
+        <script type='text/template'>
+          ``` 
+          // 最佳实践 
+          class ErrorBoundary extends React.Component { 
+            state = { hasError: false };
+            componentDidCatch(error, info) { 
+              this.setState({ hasError: true }); 
+            } 
+
+            render() { 
+              if (this.state.hasError) { 
+                return (<h1>Something went wrong.</h1>); 
+              } 
+              return this.props.children; 
+            } 
+          } 
+          ```
+        </script>
+      </section>
+
       <section>
         <h6>WEB团队内部分享交流会</h6>
         <p class='fs-22'>作者：@Hfimy</p>
@@ -11,6 +56,7 @@
         <h4>进步始于交流，收获源于分享</h4>
       </section>
     </section>
+
     <section data-markdown>
       <script type='text/template'>
         <p class='ta-c'>浅谈React16新特性</p>
@@ -356,6 +402,8 @@
         Thank you !
       </h2>
     </section>
+    --}}
+
   </div>
 </div>
 
