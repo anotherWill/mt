@@ -80,6 +80,7 @@ if (process.argv.indexOf('development') > -1) {
     contentBase: 'dist',
     overlay: true,
     hot: true,
+    port: 8082,
     inline: true,
     watchOptions: {
       poll: 1000
