@@ -1,0 +1,33 @@
+  <section>
+      <p class='ta-c'>CMD</p>
+  </section>
+  <section data-markdown class="ta-l">
+    <script type='text/template'>
+      `CMD(Common Module Definition)` 通用模块定义,它是CMD规范是国内发展出来的。需要引入`SeaJS`库，它也定义了全局`define`函数来定义模块。
+    </script>
+  </section>
+  <section data-markdown>
+    <script type='text/template'>
+      ```javascript
+      // 定义模块  myModule.js 
+      define(function(require, exports, module) {
+        var $ = require('jquery.js')
+        $('div').addClass('active');
+      });
+      // 加载模块
+      seajs.use(['myModule.js'], function(my){});
+      ```
+    </script>
+  </section>
+  <section>
+    <p>AMD 和 CMD 的异同</p>
+  </section>
+  <section data-markdown>
+    <script type='text/template'>
+      * 都是异步加载不阻塞浏览器渲染
+      * 被依赖的`js`文件可以先于依赖它的文件加载到浏览器
+      * `AMD`推崇依赖前置，在编译和执行当前模块之前，必须指明当前模块所依赖的模块
+      * `CMD`推崇就近依赖，遍历所有的`require`关键字才知道依赖哪些模块
+      * 执行时机不同，`AMD` 提前执行，`CMD` 延迟执行     
+    </script>
+  </section>

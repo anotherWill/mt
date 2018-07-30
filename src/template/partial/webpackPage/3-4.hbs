@@ -1,0 +1,20 @@
+  <section>
+      <p class='ta-c'>AMD</p>
+  </section>
+  <section data-markdown class="ta-l">
+    <script type='text/template'>
+      `AMD(Asynchronous Module Definition)` <span class="co-y">异步</span>模块定义,它是一个在浏览器端模块化开发的规范。需要引入`RequireJS`库，它定义了全局`define`函数来定义模块。
+    </script>
+  </section>
+  <section  data-markdown>
+    <script type='text/template'>
+      ```javascript
+      // 定义模块 (moduleName, [dependency], callback)
+      define("moduleName", ["dep1", "dep2"], function(d1, d2) {
+        return someExportedValue;
+      });
+      // 模块都加载成功后，加载的模块会以参数形式传入回调
+      require(["module1", "module2"], function(module1, module2) { /* ... */ });
+      ```
+    </script>
+  </section>

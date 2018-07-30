@@ -71,6 +71,7 @@ const config = {
       to: 'lib',
     }]),
   ],
+  devtool: 'cheap-module-source-map'
 }
 
 config.plugins = config.plugins.concat(htmlPlugins)
@@ -80,12 +81,13 @@ if (process.argv.indexOf('development') > -1) {
     contentBase: 'dist',
     overlay: true,
     hot: true,
-    port: 8082,
+    port: 8002,
     inline: true,
     watchOptions: {
       poll: 1000
     }
-  }
+  };
+  config['devtool'] = 'cheap-module-eval-source-map'
   config.plugins = config.plugins.concat(new webpack.HotModuleReplacementPlugin())
 }
 

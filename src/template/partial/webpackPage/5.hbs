@@ -1,5 +1,16 @@
 <section data-markdown>
   <script type='text/template'>
-    <p class='ta-c'>输出(output)</p>
+    <p class='ta-c'>webpack 打包原理</p>
+  </script>
+</section>
+<section data-markdown>
+  <script type='text/template'>
+    * 从<span class="co-y">入口(entry)</span>开始对代码进行<span class="co-y">静态分析</span>，分析依赖，
+    * 进一步分析依赖中的依赖，不断重复(递归)，形成依赖关系图集
+    * 分析过程中为每个依赖分配一个 `ID`
+    * 分析出依赖关系并将不同的模块交给匹配(正则)的<span class="co-y">加载器(loader)</span>处理
+    * 编译时，以文件为模块，<span class="co-y">注册插件</span>(plugins)，监听事件节点
+    * 根据配置生成代码块(chunk)
+    * 用CommonJS规范加载代码块(chunk)，通过字符串拼接构建代码最终<span class="co-y">输出(output)</span>
   </script>
 </section>

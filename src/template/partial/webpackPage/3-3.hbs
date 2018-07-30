@@ -1,0 +1,20 @@
+  <section>
+      <p class='ta-c'>CommonJS</p>
+  </section>
+  <section data-markdown class="ta-l">
+    <script type='text/template'>
+      `CommonJS` 原名 `ServerJS` 是以在浏览器环境之外构建 `JavaScript` 生态系统为目标而产生的项目，比如在服务器和桌面环境中。
+    </script>
+  </section>
+  <section  data-markdown>
+    <script type='text/template'>
+      ```javascript
+        // 同步加载模块
+        require("../file.js");  
+        // 导出需要暴漏的模块
+        exports.doStuff = function() {};  
+        // 导出需要暴漏的模块
+        module.exports = someValue;  
+      ```
+    </script>
+  </section>

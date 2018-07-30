@@ -1,0 +1,19 @@
+ <section class="ta-l">
+    <p>loader:转换特定类型的模块(一个或多个)</p>
+  </section>
+  <section data-markdown>
+    <script type='text/template'>
+      ```javascript
+        // 反顺序执行,第一个 loader 返回值给下一个 loader，最后返回预期的 js
+        module: {
+          rules: [{
+            test: /\.css$/,
+            use: [
+              { loader: 'style-loader' },
+              { loader: 'css-loader' }
+            ]
+          }]
+        }
+      ```
+    </script>
+  </section>
